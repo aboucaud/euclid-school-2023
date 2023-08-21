@@ -61,7 +61,7 @@ git clone https://github.com/aboucaud/euclid-school-2023
 
 ### Step 2 - JupyterHub
 
-Connect to the Flatiron JupyterHub instance: https://binder.flatironinstitute.org/
+Connect to the Flatiron JupyterHub instance augmented with CAMELS public data: https://binder.flatironinstitute.org/~sgenel/CAMELS_PUBLIC
 
 ### Step 3 - Uploading files
 
