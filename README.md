@@ -1,4 +1,4 @@
-# ML exercices - Ecole d'été Rodolphe Clédassou 2023
+# ML lectures - Summer school Rodolphe Clédassou 2023
 
 > **Marc Huertas-Company** (IAC) and **Alexandre Boucaud** (APC)  
 > August 2023
@@ -56,8 +56,7 @@ Follow these steps in order to run the `*cosmology_with_one_galaxy*` notebooks.
 Clone this folder on your computer
 
 ```shell
-git clone 
-cd 
+git clone https://github.com/aboucaud/euclid-school-2023
 ```
 
 ### Step 2 - JupyterHub
@@ -66,7 +65,7 @@ Connect to the Flatiron JupyterHub instance: https://binder.flatironinstitute.or
 
 ### Step 3 - Uploading files
 
-Upload the content of the `dataset` folder content inside the `~/home` directory on JupyterHub (<kbd>Upload</kbd> button at the top right)
+Upload the content of the `euclid-school-2023/dataset` folder content inside the `~/home` directory on JupyterHub (<kbd>Upload</kbd> button at the top right)
 
 The `home` folder online should look like this
 ```
@@ -74,16 +73,19 @@ The `home` folder online should look like this
 ├── cosmo_1_galaxy.tar
 ├── create_galaxy_properties_data.py
 ├── latin_hypercube_params_IllustrisTNG.txt
-└── latin_hypercube_params_SIMBA.txt
+├── latin_hypercube_params_SIMBA.txt
+├── multifield.tar
+└── requirements.txt
 ```
 
-### Step 4 - Untar the cosmo_1_galaxy folder
+### Step 4 - Untar the cosmo_1_galaxy and multifield folders
 
 Open a terminal on the JupyterHub instance : `New > Terminal`
 
 ```shell
 cd home
 tar -xvf cosmo_1_galaxy.tar
+tar -xvf multifield.tar
 ```
 
 ### Step 5 - Creation of the galaxy properties tables
@@ -97,18 +99,18 @@ python create_galaxy_properties_data.py --n_realizations 1000
 > [!IMPORTANT]
 > The `n_realizations` arguments will be directly correlated with the size of the final dataset. If at some point you lack memory to run the notebooks and the TF code, try reducing the number of realizations and re-running steps 6 and 6-bis
 
-### Step 6 - Creation of the TensorFlow datasets
+### Step 6 - Creation of the TF catalog dataset
 
 Install the dependencies
 
 ```shell
-python -m pip install tensorflow tensorflow-datasets
+python -m pip install -r requirements.txt
 ```
 
 and run the TensorFlow dataset creation
 
 ```shell
-cd cosmo_1_galaxy
+cd ~/home/cosmo_1_galaxy
 tfds build --manual_dir=/home/jovyan/home/
 ```
 
@@ -146,3 +148,17 @@ and rerun
 ```shell
 tfds build --manual_dir=/home/jovyan/home/
 ```
+
+### Step 7 - Creation of the TF image dataset
+
+Similar to step 6
+
+```shell
+cd ~/home/multifield
+tfds build --manual_dir=/home/jovyan/home/
+```
+
+and repeat for the other simulation by manually editing `~/home/multifield/multifield_dataset_builder.py` like step 6-bis
+
+> [!NOTE]
+> This image dataset is much heavier and the processing with CNNs is extremely slow on CPUs. If you have access to a machine with GPUs, you can download the Tensorflow datasets created on this JupyterHub to process them elsewhere. Relevant files will be stored in `/home/jovyan/tensorflow_datasets`.

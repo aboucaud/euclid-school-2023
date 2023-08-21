@@ -1,0 +1,4 @@
+tensorflow
+tensorflow-datasets
+tensorflow-probability
+seaborn
