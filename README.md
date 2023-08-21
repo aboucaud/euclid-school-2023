@@ -161,4 +161,6 @@ tfds build --manual_dir=/home/jovyan/home/
 and repeat for the other simulation by manually editing `~/home/multifield/multifield_dataset_builder.py` like step 6-bis
 
 > [!NOTE]
-> This image dataset is much heavier and the processing with CNNs is extremely slow on CPUs. If you have access to a machine with GPUs, you can download the Tensorflow datasets created on this JupyterHub to process them elsewhere. Relevant files will be stored in `/home/jovyan/tensorflow_datasets`.
+> This image dataset is much heavier and the processing with CNNs is extremely slow on CPUs. If you have access to a machine with GPUs, you can download the Tensorflow datasets created on this JupyterHub to process them elsewhere. Relevant files will be stored in `/home/jovyan/tensorflow_datasets`.  
+> 
+> Refer to the "Downloading data" section on https://wiki.flatironinstitute.org/Public/UsingFiBinder for more options.
