@@ -29,7 +29,7 @@ SOON..
 
 ### Cycle 2
 
-Instructions for the [notebook](cycle2_cosmology_with_one_galaxy.ipynb):
+Instructions for the [notebook](notebooks/cycle2_cosmology_with_one_galaxy.ipynb):
 
 1. choose one simulation between `IllustrisTNG` (dataset version `1.0.0`) and `SIMBA` (dataset version `1.0.1`)
 2. execute Part 1 and 2 whose goal is to predict $\Omega_M$ and try to improve the results of the MLP
@@ -66,14 +66,13 @@ Connect to the Flatiron JupyterHub instance: https://binder.flatironinstitute.or
 
 ### Step 3 - Uploading files
 
-Upload the folder content inside the `~/home` directory on JHub (Upload button at the top right)
+Upload the content of the `dataset` folder content inside the `~/home` directory on JupyterHub (<kbd>Upload</kbd> button at the top right)
 
 The `home` folder online should look like this
 ```
 ├── README.md
 ├── cosmo_1_galaxy.tar
 ├── create_galaxy_properties_data.py
-├── cycle2_cosmology_with_one_galaxy.ipynb
 ├── latin_hypercube_params_IllustrisTNG.txt
 └── latin_hypercube_params_SIMBA.txt
 ```
