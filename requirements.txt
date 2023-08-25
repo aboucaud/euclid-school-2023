@@ -1,0 +1,7 @@
+numpy
+matplotlib
+tensorflow
+tensorflow-datasets
+tensorflow-probability
+seaborn
+mlflow

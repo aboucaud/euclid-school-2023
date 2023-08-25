@@ -7,7 +7,7 @@
 
 ### Cycle 1
 
-SOON..
+- [Introduction to machine learning with (probabilistic) neural networks](https://aboucaud.github.io/slides/2023/euclid-school-ml-cycle1)
 
 ### Cycle 2
 
@@ -20,7 +20,8 @@ SOON..
 
 ### Cycle 3
 
-SOON..
+- Slides to come soon
+- [Friday Zoom recording]()
 
 ## Notebooks
 
@@ -29,7 +30,19 @@ SOON..
 
 ### Cycle 1
 
-SOON..
+#### Setup
+
+To run the notebooks locally, install the dependencies from the `requirements.txt`
+```shell
+python -m pip install -r requirements.txt
+```
+
+> [!WARNING]
+> macOS users with M1/M2 processors please follow the instructions below to install TensorFlow (otherwise the notebook kernel will die at the beginning)
+> [Apple M1/M2 specific TensorFlow installation](https://developer.apple.com/metal/tensorflow-plugin/)
+
+- [Neural regression with classic and probabilistic neural networks](notebooks/cycle1_intro_nn_logprob.ipynb)
+- [Same notebook with MLFlow examples](notebooks/cycle1_intro_nn-mlflow-example.ipynb)
 
 ### Cycle 2
 
