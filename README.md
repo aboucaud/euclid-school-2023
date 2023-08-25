@@ -21,12 +21,10 @@
 ### Cycle 3
 
 - Slides to come soon
-- [Friday Zoom recording]()
+- [Friday Zoom recording](https://u-paris.zoom.us/rec/play/jTDV8v9lMMaJ1I9wAYtU-OEZxA8kUqfutphYk5TOh5KW3uSNFD6Rnds5OTCM1pRZl1I31--O0y59eC9d.FPLI8i2AqyXNsXCQ) | 
+Recording code: CqBP?5b!Y^
 
 ## Notebooks
-
-> [!WARNING]
-> For cycle 2 and 3, those not using Google Colab links must first run the [dataset creation](datasets/README.md) steps below before starting with the notebooks.
 
 ### Cycle 1
 
@@ -46,6 +44,9 @@ python -m pip install -r requirements.txt
 
 ### Cycle 2
 
+> [!WARNING]
+> For cycle 2 and 3, those not using Google Colab links must first run the [dataset creation](datasets/README.md) steps below before starting with the notebooks.
+
 Instructions for the [notebook](notebooks/cycle2_cosmology_with_one_galaxy.ipynb):
 
 1. choose one simulation between `IllustrisTNG` (dataset version `1.0.0`) and `SIMBA` (dataset version `1.0.1`)
@@ -57,7 +58,10 @@ An alternative is to try [the notebook on Google Colab](https://colab.research.g
 
 ### Cycle 3
 
-SOON..
+> [!WARNING]
+> For cycle 2 and 3, those not using Google Colab links must first run the [dataset creation](datasets/README.md) steps below before starting with the notebooks.
+
+
 
 ## References
 
